@@ -1,0 +1,153 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+
+  background-color: var(--clr-primary);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4em;
+  padding: 1em;
+  background: linear-gradient(to right, #a1c4fd, #c2e9fb, #fdbb2d, #22c1c3);
+  color: white;
+  padding: 1em;
+}
+.header-img {
+  height: 100%;
+  margin-right: 6px;
+  background-color: none;
+}
+.header-h2 {
+  font-size: 30px;
+  margin-right: auto;
+}
+.header-h4 {
+  font-size: 20px;
+  font-weight: 100px;
+}
+
+.form {
+  display: grid;
+  grid-template: 1fr;
+  grid-gap: 1em;
+  max-width: 50rem;
+}
+.form-input {
+  border: 2px solid #dbae34; /* Set a bolder border color */
+  border-radius: 5px;
+  outline: none;
+  padding: 1em;
+  background: transparent;
+  transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.form-input:focus {
+  border: 2px solid #6e7509;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+@keyframes inputBorderAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.form-input::before {
+  content: "";
+  display: block;
+  border-bottom: 2px solid #2980b9; /* Adjust the before border color */
+  width: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.form-input:focus::before {
+  animation: inputBorderAnimation 0.3s forwards;
+}
+
+.form-button {
+  grid-column: 3/-3;
+  padding: 1em 3em;
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(to right, #a1c4fd, #c2e9fb, #fdbb2d, #22c1c3);
+  border: none;
+  color: white;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Add a hover effect */
+.form-button:hover {
+  background: linear-gradient(to right, #88b5fc, #a9defc, #fca82d, #19a9ac);
+  transform: scale(1.05); /* Add a slight scale effect on hover */
+}
+
+main {
+  padding: 40px;
+}
+@media (max-width: 600px) {
+  .form {
+    max-width: 100%;
+  }
+
+  .form-input {
+    padding: 1em;
+  }
+
+  .form-button {
+    grid-column: 1/-1;
+    padding: 1em;
+  }
+}
+.imageDiv {
+  position: relative;
+}
+
+.meme-image {
+  max-width: 20em;
+  align-self: center;
+}
+
+.memeText {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0.5em 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+    2px 2px 5px #000;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.top {
+  top: 0;
+}
