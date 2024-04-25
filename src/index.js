@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./style.css";
-// import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Header from "./Header";
 import Form from "./Form";
